@@ -57,12 +57,14 @@ int precedence(char ch)
 {
     if(ch=='(' || ch==')')
         return 0;
-    if(ch=='+' || ch=='-')
+    else if(ch=='+' || ch=='-')
         return 1;
-    if(ch=='*' || ch=='/')
+    else if(ch=='*')
         return 2;
-    if(ch=='^')
+    else if(ch=='/')
         return 3;
+    else if(ch=='^')
+        return 4;
 }
 
 void postfix(char ch[])
